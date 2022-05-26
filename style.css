@@ -17,8 +17,8 @@ body {
   font-family: 'Roboto Mono', monospace;
   max-width: 1000px;
   min-height: 100vh;
-  color: #00e4ff;
-  background-color: #003950;
+  color: hsl(153, 100%, 46%);
+  background-color: #011926;
 }
 
 textarea {
@@ -29,12 +29,12 @@ textarea {
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   background-color: transparent;
-  color: #00e4ff;
+  color: hsl(153, 100%, 46%);
   font-size: 1.75em;
   text-align: center;
-  height: 200px;
+  min-height: 80px;
   padding: 20px;
-  background-color: hsl(197, 100%, 14%);
+  background-color: transparent;
   resize: none;
   border-radius: 20px;
 }
@@ -65,17 +65,33 @@ textarea::-webkit-scrollbar {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #00e4ff;
-  border-radius: 10px;
+  color: hsl(153, 100%, 46%);
+  background-color: hsl(201, 95%, 5%);
+  border-radius: 2px;
   outline: 0;
   border: 0;
   padding: 15px 20px;
 }
 
+
 .key-btn#key-space {
   padding: 15px 100px;
 }
 
-.key-btn:active {
-  background-color: #ffcefb;
+.key-btn:active,
+.key-btn.active {
+  color: hsl(201, 95%, 8%);
+  background-color: hsl(153, 100%, 46%);
+}
+
+@media screen and (max-width:850px) {
+  body {
+    font-size: 10px;
+  }
+  .key-btn {
+    padding: 5px 10px;
+  }
+  .key-btn#key-space {
+    padding: 5px 100px;
+  }
 }
