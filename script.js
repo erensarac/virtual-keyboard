@@ -24,3 +24,5 @@ document.addEventListener('keydown', (e) => {
   keyElement.classList.remove('active');
   testArea.focus();
 })
+
+console.log('JavaScript is awesome');
