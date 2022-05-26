@@ -12,6 +12,9 @@ document.addEventListener("keyup", (e) => {
 })
 
 document.addEventListener("keypress", (e) => {
+  if(testArea.value.length > 165){
+    testArea.value = ''
+  }
   let keyId = `#key-${e.key}`;
   let keyElement = document.querySelector(keyId);
   keyElement.classList.add('active');
@@ -24,5 +27,3 @@ document.addEventListener('keydown', (e) => {
   keyElement.classList.remove('active');
   testArea.focus();
 })
-
-console.log('JavaScript is awesome');
